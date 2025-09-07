@@ -4,6 +4,7 @@ const app  = express();
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workout')
 
+
 dotenv.config()
 app.use(express.json())
 app.use((req,res,next)=>{
@@ -22,7 +23,7 @@ mongoose.connect(process.env.MONGO_URI).then(()=>{
 });
 })
 .catch((error)=>{console.log(error)})
-
 const PORT = process.env.PORT;
+
 
 
